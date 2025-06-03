@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rahiq Al-Makhtum</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let stopEvent
+    const sayTime =  () => {
+        console.log('The time is:', Date.now());
+    }
+    
+    document.querySelector('#start').addEventListener('click', () => {
+        stopEvent = setInterval(sayTime, 1000);
+    })
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(stopEvent)
+    })
+    
+</script>
+</html>
